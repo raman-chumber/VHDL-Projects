@@ -32,5 +32,4 @@ P2_4_Bit_Full_Adder.vhd
 
 I created a new Xilinx Vivado Project with the two files ((i) P2_Full_Adder_Text_Book.vhd and (ii) P2_4_Bit_Full_Adder_Text_Book.vhd) and tested the functioning of the full adder on the Nexys 4 DDR board.
 
-The lab materials and the VHDL code have been provided by Jordan Christman. I have made modifications to existing code and filled in the code omitted (left blank) by the professor. 
 
