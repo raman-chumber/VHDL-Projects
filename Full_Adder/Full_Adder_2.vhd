@@ -3,8 +3,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Entity Declaration
--- This is where all the Inputs & Outputs are specified
+
 entity Full_Adder_2 is
 port (
 	S			: out std_logic;
@@ -14,25 +13,17 @@ port (
 	C_in		: in std_logic);
 end Full_Adder_2;
 
--- Architecture Body
--- This is where we describe what occurs
+
 architecture behavior of Full_Adder_2 is
 
--- Define signals we will be using
 signal inputs	: std_logic_vector(2 downto 0);
 signal outputs	: std_logic_vector(1 downto 0);
--- Begin statement goes after signals are defined
--- and after components are instantiated. Note that
--- we are not instantiating any signals in this design
+
 begin
--- Combine inputs & outputs into std_logic_vector
 inputs <= C_in & x & y;
 C_out <= outputs(1);
 S <= outputs(0);
 
--- Process that determines output based on the inputs
--- Note the similarity between this and the Full_Adder_2
--- truth table
 adder_proc : process(inputs)
 begin
 	case inputs is
@@ -56,4 +47,4 @@ begin
 			outputs <= (others => 'X');
 	end case;
 end process adder_proc;
-end behavior;}
+end behavior;
